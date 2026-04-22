@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Untuk Kamu ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #f43f5e; border-radius: 10px; }
+        body, html { height: 100%; margin: 0; overflow: hidden; background-color: #111827; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 flex justify-center">
+
+    <audio id="bg-music" loop>
+        <source src="assets/musik.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="w-full max-w-[480px] h-screen bg-rose-50 relative overflow-hidden shadow-2xl flex flex-col items-center justify-center">
+
+        <div id="section1" class="w-full text-center fade-in flex flex-col items-center justify-center h-full p-6">
+            <h1 class="text-2xl font-semibold text-rose-600 mb-6">haloo sayangggg <br> aku punya sesuatu buat kamu</h1>
+            <div class="w-48 h-48 bg-gray-300 rounded-full mb-8 shadow-lg border-4 border-white overflow-hidden mx-auto flex items-center justify-center">
+                <img src="assets/foto1.jpg" alt="Foto Cover" class="w-full h-full object-cover">
+            </div>
+            <button onclick="showSection('section2')" class="bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-8 rounded-full shadow-md transition transform hover:scale-105 animate-pulse">
+                Buka ini bby
+            </button>
+        </div>
+
+        <div id="section2" class="w-full h-full hidden fade-in relative bg-gray-900">
+            <div class="grid grid-cols-2 grid-rows-4 w-full h-full gap-1 p-1">
+                <img src="assets/foto2.jpg" loading="lazy" class="w-full h-full object-cover">
+                <img src="assets/foto3.jpg" loading="lazy" class="w-full h-full object-cover">
+                <img src="assets/foto4.jpg" loading="lazy" class="w-full h-full object-cover">
+                <img src="assets/foto5.jpg" loading="lazy" class="w-full h-full object-cover">
+                <img src="assets/foto6.jpg" loading="lazy" class="w-full h-full object-cover">
+                <img src="assets/foto7.jpg" loading="lazy" class="w-full h-full object-cover">
+                <img src="assets/foto8.jpg" loading="lazy" class="w-full h-full object-cover">
+                <img src="assets/foto9.jpg" loading="lazy" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute bottom-10 left-0 w-full flex justify-center z-10">
+                <button onclick="showSection('section3')" class="bg-rose-500/90 backdrop-blur-md hover:bg-rose-600 text-white font-bold py-3 px-8 rounded-full shadow-2xl border border-rose-300 transition transform hover:scale-105 animate-bounce">
+                    pencet videonyah
+                </button>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none"></div>
+        </div>
+
+        <div id="section3" class="w-full h-full hidden fade-in relative bg-black flex-col items-center justify-center">
+            
+            <video id="my-video" src="assets/video.mp4" playsinline controls class="w-full h-auto max-h-full object-contain"></video>
+
+            <div class="absolute bottom-10 left-0 w-full flex justify-center z-10">
+                <button onclick="showSection('section4')" class="bg-rose-500/90 backdrop-blur-md hover:bg-rose-600 text-white font-bold py-3 px-8 rounded-full shadow-2xl border border-rose-300 transition transform hover:scale-105 animate-bounce">
+                    Lanjut yahhh
+                </button>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none"></div>
+        </div>
+
+        <div id="section4" class="w-full text-center hidden fade-in flex-col items-center justify-center h-full relative p-6 bg-rose-50">
+            <h2 class="text-2xl font-bold text-rose-600 mb-4">I'm Sorry 🥺</h2>
+            
+            <div class="bg-white/80 p-5 rounded-xl shadow-sm mb-6 text-left w-full h-64 overflow-y-auto border border-rose-200">
+                <p class="text-sm text-gray-700 leading-relaxed">
+                    Halo sayangg,<br><br>
+                    Aku buat website kecil ini khusus buat kamu. Lewat website ini, aku buat ini sambil nahan nangis sayang karna masi ditempat kerja, aku mau minta maaf sayangggg, atas semua kesalahanku, aku tau sampai
+                    kapanpun kamu gabakal bisa lupain kejadian yang telah terjadi akhir akhir ini, tapi sayanggg, aku cuma mau kamu tauu kalo setelah itu aku udah bener bener sepenuh nya ke kamuu sayangg, 
+                    aku tau jalan nya bakal susahh, andai aku ga ngelakuin itu ya sayangg, tapi semua udah terjadii, aku cuma mau kita balik lagi kaya duluuu, setiap mau putus aku pasti selalu nginget nginget semua hal yang kita lakuin pas lagi bareng syanggg, sebahagia itu kita tpi malah aku hancurinn, ya sayanggg aku mohon
+                    aku mau kita kaya dulu lagi walau jalan nya sesusah apapun aku rela demi kamu sayangggg, i love you sayangg today, tomorrow, forever.
+                </p>
+            </div>
+
+            <p class="text-lg font-semibold text-rose-700 mb-6">Jadi, kamu mau maafin aku?</p>
+
+            <div class="relative w-full h-32 flex justify-center items-center gap-4" id="btn-container">
+                <button id="btn-yes" onclick="showModal()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full shadow-md z-10">
+                    Maafin 😍
+                </button>
+                <button id="btn-no" class="bg-gray-400 text-white font-bold py-2 px-6 rounded-full shadow-md z-10 transition-all duration-200 ease-in-out">
+                    Enggak 💔
+                </button>
+            </div>
+        </div>
+
+        <div id="modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+            <div class="bg-white p-8 rounded-2xl shadow-2xl text-center mx-4 transform scale-100 transition-transform duration-300">
+                <div class="text-5xl mb-4">🎉</div>
+                <h3 class="text-xl font-bold text-rose-600 mb-2">Makasih sayang!</h3>
+                <p class="text-gray-600">I love you so much! ❤️</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Sembunyikan semua halaman
+            ['section1', 'section2', 'section3', 'section4'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+                document.getElementById(id).classList.remove('flex');
+            });
+
+            // Tampilkan halaman yang dituju
+            const target = document.getElementById(sectionId);
+            target.classList.remove('hidden');
+            target.classList.add('flex');
+
+            // --- LOGIKA AUDIO & VIDEO ---
+            const bgMusic = document.getElementById('bg-music');
+            const myVideo = document.getElementById('my-video');
+
+            if (sectionId === 'section2') {
+                // Masuk Galeri: Putar lagu latar
+                bgMusic.play().catch(e => console.log("Audio ditahan"));
+            } 
+            else if (sectionId === 'section3') {
+                // Masuk Video: Pause lagu latar, putar video dari awal
+                bgMusic.pause();
+                myVideo.currentTime = 0; // Reset video ke detik ke-0
+                myVideo.play().catch(e => console.log("Video ditahan"));
+            } 
+            else if (sectionId === 'section4') {
+                // Masuk Surat: Pause video, lanjut putar lagu latar
+                myVideo.pause();
+                bgMusic.play().catch(e => console.log("Audio ditahan"));
+            }
+        }
+
+        // Logika Tombol Enggak Lari
+        const btnNo = document.getElementById('btn-no');
+        const container = document.getElementById('btn-container');
+
+        function moveButton() {
+            btnNo.style.position = 'absolute';
+            const maxX = container.clientWidth - btnNo.clientWidth;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * 150) - 75; 
+            btnNo.style.left = `${randomX}px`;
+            btnNo.style.top = `${randomY}px`;
+        }
+
+        btnNo.addEventListener('mouseover', moveButton);
+        btnNo.addEventListener('touchstart', moveButton);
+
+        // Logika Modal Sukses
+        function showModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => modal.firstElementChild.classList.add('scale-105'), 10);
+            setTimeout(() => modal.firstElementChild.classList.remove('scale-105'), 300);
+        }
+    </script>
+</body>
+</html>
